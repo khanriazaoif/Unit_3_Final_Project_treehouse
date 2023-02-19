@@ -129,6 +129,7 @@ form.addEventListener("submit", e => {
         const nameIsValid = /^[a-zA-Z]+ ?[a-zA-Z]*? ?[a-zA-Z]*?$/.test(nameField.value);
         if (nameIsValid === true) {
             validationPass(nameField);
+            console.log('yes name is valid');
         } else {
             validationFail(nameField);
         }
@@ -138,8 +139,10 @@ form.addEventListener("submit", e => {
     function emailValidator(){
         const emailIsValid = /^[^@]+@[^@.]+\.[a-z]+$/i.test(email.value);
         if (emailIsValid === true){
+            console.log('yes email');
             validationPass(email);
         } else {
+            console.log('no email');
             validationFail(email);
         }
     }
